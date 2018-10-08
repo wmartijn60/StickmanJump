@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         }
 
         myRigidBody.velocity = new Vector2(moveSpeed, myRigidBody.velocity.y);
-        //Jump
+        //Jump + double jump
         
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {

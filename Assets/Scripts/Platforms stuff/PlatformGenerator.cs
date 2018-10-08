@@ -41,7 +41,7 @@ public class PlatformGenerator : MonoBehaviour
     }
 	
 	
-    //Random Platform selector
+    //Random Platform selector 
 	void Update ()
     {
 	    if(transform.position.x < generationPoint.position.x)

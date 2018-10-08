@@ -6,7 +6,7 @@ public class CoinGenerator : MonoBehaviour
 
     public ObjectPooler coinPool;
 
-    public float distanceBetweenCoins;
+    private float distanceBetweenCoins = 1;
     public GameObject maxHeightPoint;
     private float maxHeight;
 
@@ -15,6 +15,7 @@ public class CoinGenerator : MonoBehaviour
     void start()
     {
         maxHeight = maxHeightPoint.transform.position.y;
+        Debug.Log("hi");
     }
     public void SpawnCoins(Vector3 startPosition)
     {
