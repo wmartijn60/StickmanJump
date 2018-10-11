@@ -3,8 +3,7 @@ using UnityEngine;
 using System.Collections;
 //using Debug = System.Diagnostics.Debug;
 
-//using Debug = System.Diagnostics.Debug;
-
+        
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
@@ -50,8 +49,8 @@ public class PlayerController : MonoBehaviour
     // Raycast and Speed update
 	void Update ()
 	{
-        Vector2 koe = new Vector2(transform.position.x  -0.9f, transform.position.y);
-	    RaycastHit2D hit = Physics2D.Raycast(koe, Vector2.down, 1f, whatIsGround);
+        Vector2 man = new Vector2(transform.position.x , transform.position.y);
+	    RaycastHit2D hit = Physics2D.Raycast(man, Vector2.down, 1.5f, whatIsGround);
         grounded = hit;
 
         if(transform.position.x > speedIncreaseMilestone)
@@ -60,10 +59,9 @@ public class PlayerController : MonoBehaviour
 
             speedIncreaseMilestone += 50;
 
-          
-           //Debug.Log("Speed is key");
             
         }
+        
 
         myRigidBody.velocity = new Vector2(moveSpeed, myRigidBody.velocity.y);
         //Jump + double jump
