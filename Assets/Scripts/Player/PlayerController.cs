@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     public float groundedRadius;
 
+    public AudioSource someSound;
+
     private Animator myAnimator;
 
     public GameManager gameManager;
@@ -106,6 +108,7 @@ public class PlayerController : MonoBehaviour
   
         if(other.gameObject.tag == "killbox")
         {
+            someSound.Play();
             gameManager.RestartGame();
             moveSpeed = startSpeed;
             speedMilestoneCount = startSpeedMilestoneCount;
