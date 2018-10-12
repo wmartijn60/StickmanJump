@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
     // Raycast and Speed update
 	void Update ()
 	{
-        Vector2 man = new Vector2(transform.position.x , transform.position.y);
+        Vector2 man = new Vector2(transform.position.x -0.2f , transform.position.y);
 	    RaycastHit2D hit = Physics2D.Raycast(man, Vector2.down, 1.5f, whatIsGround);
         grounded = hit;
 
@@ -80,7 +80,6 @@ public class PlayerController : MonoBehaviour
                 hasJumped = true;
                 jumpTimeCounter = jumpTime;
                 canDoubleJump = false;
-               // Debug.Log(canDoubleJump);
 
             }
         }
@@ -95,7 +94,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-      
+	
 
         myAnimator.SetFloat("Speed", myRigidBody.velocity.x);
         myAnimator.SetBool("Grounded", grounded);

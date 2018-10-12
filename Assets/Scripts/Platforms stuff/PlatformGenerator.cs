@@ -22,8 +22,8 @@ public class PlatformGenerator : MonoBehaviour
     public float maxHeightChange;
     private float heightChange;
 
-    public CoinGenerator coinGenerator;
-    public float randomCoinThreshold;
+    ///public CoinGenerator coinGenerator;
+  //  public float randomCoinThreshold;
 
 
     // randomiser for platform selection
@@ -67,14 +67,14 @@ public class PlatformGenerator : MonoBehaviour
             newPlatform.transform.position = transform.position;
             newPlatform.transform.rotation = transform.rotation;
             newPlatform.SetActive(true);
-            //coins
+            //coins range
 
-            if (Random.Range(0f, 100f) < randomCoinThreshold)
-            {
-                coinGenerator.SpawnCoins(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z));
-            }
+          //  if (Random.Range(30f, 100f) < randomCoinThreshold)
+          //  {
+         //       coinGenerator.SpawnCoins(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z));
+         //   }
 
-            transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector]/2), transform.position.y, transform.position.z);
+         //   transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector]/2), transform.position.y, transform.position.z);
         }
 	}
 }
